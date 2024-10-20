@@ -1,0 +1,188 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 22.04.0 ] */
+/* [wxMaxima: title   start ]
+24-Sep-2020
+   [wxMaxima: title   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q Find the limit of f(x) = 1/x² at x = 0 and f(x) = 1/x^4 at ∞
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f(x):= 1/x^2;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+limit(f(x), x, 0);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f(x):= 1/x^4;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+limit(f(x), x, ∞);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q Find the right and left hand limit of 1/x at x = 0
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f(x):= 1/x;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+limit(f(x), x, 0, minus);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+limit(f(x), x, 0, plus);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q Find the right and left hand limit of |x/|x|| at x = 0
+and what can you conclude from it
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f(x):= abs(x/(abs(x)));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+limit(f(x), x, 0, minus);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+limit(f(x), x, 0, plus);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+limit(f(x), x, 0);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+the limit of f(x) = |x/|x|| exist at x = 0 and it is 1
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q Find points of maxima and minima for f(x) = 3x/(x²+1)² also find maximum and minimum value of f(x) and plot the graph of f(x)
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f(x):= 3*x/(x^2 + 1)^2;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot2d(f(x), [x, -5, 5]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solve(diff(f(x), x)=0, x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+d2f(x):= ''(diff(f(x), x, 2));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+d2f(-1/(sqrt(3)));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+d2f(1/(sqrt(3)));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+f(x) is minimum at x = -1/sqrt(3) as f''(x) at x = -1/sqrt(3) is +ive and f(x) is maximum at x = 1/sqrt(3) as f''(x) at x = 1/sqrt(3) is -
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f(-1/sqrt(3));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f(1/sqrt(3));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+maximum value of f(x) is 3^(5/2)/16 and minimum value of f(x) is -3^(5/2)/16
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q Find points of maxima and minima for f(x) = 1/(x - %e^x) also find maximum and minimum value of f(x) and plot the graph of f(x)
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f(x):= 1/(x - %e^x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot2d(f(x), [x, -2, 2]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solve(diff(f(x), x) = 0, x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+d2f(x):= ''(diff(f(x), x, 2));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+d2f(-log(log(%e))/log(e));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+f(x) is minimum at x = 1 as f''(x)
+at x = 0 is 1 and there is no
+maximum.
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f(0);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+minimum value of f(x) is -1 at x = 0.
+   [wxMaxima: comment end   ] */
+
+
+
+/* Old versions of Maxima abort on loading files that end in a comment. */
+"Created with wxMaxima 22.04.0"$

@@ -1,0 +1,201 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 22.04.0 ] */
+/* [wxMaxima: title   start ]
+03 Sep 2020
+   [wxMaxima: title   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q Evaluate 2^10, 3^10, 4^10
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+2^10;
+3^10;
+4^10;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q find the value of 10π upto 100 decimal places
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+bfloat(10*π), fpprec:100;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q Let M = [[1, 2, 3],
+           [3, 2, 1],
+           [1, 1, 1]]
+find M+M, M.M, M^3, [1, 0, 1].M
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+M: matrix([1, 2, 3], [3, 2, 1], [1, 1, 1]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+M+M;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+M.M;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+M^^3;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+[1, 0, 1].M;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q Find Sin²(π/4)
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+sin(%pi/4)^2;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q Find 8C4
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+binomial(8, 4);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q Find factors of 80
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+factor(80);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q Find next and previous prime of 2020
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+next_prime(2020);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+prev_prime(2020);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q Find 10P3
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+load(functs)$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+permutation(10, 3);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q Find 10Πi=1 i^3 and nΣi=1 i^3
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+prod(i^3, i, 1, 10);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+simpsum: true$
+sum(i^3, i, 1, n);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q Find numeric value of e²
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+%e^2, numer;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q Find the remainder when 193 divided by 7
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+mod(193, 7);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q Let f(x)= x³ + log(x), find f(1)
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f(x):= x^3 + log(x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f(1);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q Find the derivative of x³ + log(x) + e^x
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+diff(x^3 + log(x) + %e^x, x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q Find the double derivative of the above function and also find the integral between 0 to 1 of the above function
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+diff(x^3 + log(x) + %e^x, x, 2);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+integrate(x^3 + log(x) + %e^x, x, 0, 1);
+/* [wxMaxima: input   end   ] */
+
+
+
+/* Old versions of Maxima abort on loading files that end in a comment. */
+"Created with wxMaxima 22.04.0"$

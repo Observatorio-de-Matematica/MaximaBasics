@@ -1,0 +1,65 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 22.04.0 ] */
+/* [wxMaxima: title   start ]
+LOG
+   [wxMaxima: title   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+log(x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+log(10);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+log_base(a, b):= log(a)/log(b);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+log_base(4, 2), numer;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+log_base(1000, 10), numer;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+log(x*y),logexpand:super;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+log(y^k), logexpand:super;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+log(y/x^k), logexpand:super;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+log(x)+log(y), logcontract;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+2*log(y), logcontract;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+log(y) - 3*log(x), logcontract;
+/* [wxMaxima: input   end   ] */
+
+
+
+/* Old versions of Maxima abort on loading files that end in a comment. */
+"Created with wxMaxima 22.04.0"$

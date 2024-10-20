@@ -1,0 +1,262 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 22.04.0 ] */
+/* [wxMaxima: comment start ]
+Q Write the Command for plotting the graph of y = xsin(1/x) and Z = xy/(x² + y²)
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot2d(x*sin(1/x), [x, -2, 2]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot3d(x*y/(x^2 + y^2), [x, -2, 2], [y, -2, 2]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q Write Command for
+1. Scaler matrix of order 4 with fixed entry -2
+2. identity matrix of order 4
+3. digonal matrix [[1, 0, 0],
+                   [0, 2, 0],
+                   [0, 0, 1]]
+4. for adding column [[5],
+                      [6]]
+   in the matrix A = [[0, 2],
+                      [3, 5]]
+   also give sytax for adding row [[5, 6]].
+   Also write for charactarstic polynomial for A and inverse of A.
+5. eigen values and eigen vectors of matrix A
+6. limit of g(x) at x = c
+7. integrating f(x) = 1 + x^2 within the limits 0 to 10
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+diagmatrix(4, -2);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ident(4);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+diag_matrix(1, 2, 1);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+A: matrix([0, 2], [3, 5]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+addcol(A, [5, 6]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+addrow(A, [5, 6]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+charpoly(A, x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+invert(A);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+eigenvalues(A);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+eigenvectors(A);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+limit(g(x), x, c);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+integrate(1+x^2, x, 0, 10);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q Let A & B be two matrix find
+1. A*B(usual)
+2. A^2(Usual)
+3. rank of A
+4. nullity of A
+5. determinant of A
+6. tranpose of A
+7. inverse of A
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+A: matrix([0, 2], [3, 5]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+B: matrix([1, 2], [3, 4]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+A.B;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+A^^2;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+rank(A);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+nullity(A);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+determinant(A);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+transpose(A);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+invert(A);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q f(x) = (x²)²-2x²
+1. find zeros of f(x)
+2. Plot graph of f(x)
+3. find f'(x) and zeros of f'(x)
+4. find f''(x) and zeros of f''(x)
+5. plot graph of f(x), f'(x) and f''(x)
+6. find factors of f(x)
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f(x):= (x^2)^2 - 2*x^2;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solve(f(x)=0, x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+multiplicities;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+df(x):= ''(diff(f(x), x));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solve(df(x)=0, x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+multiplicities;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+d2f(x):=''(diff(f(x), x, 2));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+solve(d2f(x)=0, x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+multiplicities;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot2d([f(x), df(x), d2f(x)], [x, -2, 2]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+factor(f(x));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Q Solve the system of eqn using inverse method
+2x + 3y - 4z = 4
+x + 2y + 3z = 6
+x - y + z = 2 
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+eq1: 2*x + 3*y - 4*z = 4;
+eq2: x + 2*y + 3*z = 6;
+eq3: x - y + z = 2;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+A: coefmatrix([eq1, eq2, eq3], [x, y, z]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+determinant(A);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+Ainv: invert(A);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+B: matrix([4], [6], [2]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+Ainv.B;
+/* [wxMaxima: input   end   ] */
+
+
+
+/* Old versions of Maxima abort on loading files that end in a comment. */
+"Created with wxMaxima 22.04.0"$

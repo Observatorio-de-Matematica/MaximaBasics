@@ -1,0 +1,88 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 22.04.0 ] */
+/* [wxMaxima: title   start ]
+Plot 2D
+   [wxMaxima: title   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot2d(sin(x), [x, -2*%pi, 2*%pi]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot2d([sin(x), cos(x)], [x, -2*%pi, 2*%pi]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot2d(sin(x), [x, -2*%pi, 2*%pi], [color, red]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot2d(sin(x), [x, -2*%pi, 2*%pi], [color, blue]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot2d(sin(x), [x, -2*%pi, 2*%pi], [color, "#00FFFF"], grid2d, [axes, solid]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+f(x):= sin(x)$
+g(x):= cos(x)$
+wxplot2d([f(x), g(x)], [x, -2*%pi, 2*%pi], [style, [points, 0.5, "#DDDDDD"],
+         [lines, 5, "#000000"]], [box, true], [grid2d, true], [axes, solid], 
+         [title, "Trignometry"], [legend, "f(x)", "g(x)"],
+         [label, ["x", 2*%pi + 0.1, 0], ["x'", -2*%pi - 0.3, 0],
+                 ["y", -0.1, 1.1], ["y'", -0.1, -1.05]],
+         [xtics, -2*%pi, %pi, 2*%pi], [ytics, false],
+         [xlabel, "time (sec)"], [ylabel, "Velocity (cm/sec)"])$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot2d([floor(x), signum(x)], [x, -5.5, 5.5], [y, -5.2, 5.2],
+     [style, [points, 2, "#FF00FF", 4], [points, 2, "#00FF00", 3]]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot2d([parametric, 2*cos(t), 2*sin(t), [t, -%pi, %pi]],
+     [style, [points, 2, "#00FF00", 4]], [yx_ratio, 1]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot2d([discrete, [[1, 2], [2, 3], [3, 4], [4, 5], [5, 6]]], [style, [points, 5, 2, 3]]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot2d(makelist(sin(n*x), n, 1, 10), [x, -%pi, %pi]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+with_slider(n, makelist(n/10, n, 1, 20), sin(n*x), [x, -%pi, %pi]); /*for animations*/
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot2d([parametric, 3*cos(t), 2*sin(t), [t, -%pi, %pi]]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot2d([%e^x, x^2], [x, -2, 2], [style ,[lines, 1, 1], [points, 1, 2, 3]],
+         [legend, "e^x", "x^2"], [title, "graph"],
+         [xtics, -2, 0.5, 2], [ytics, 0, %e^-1, %e^2],
+         [xlabel, "domain"], [ylabel, "range"]);
+/* [wxMaxima: input   end   ] */
+
+
+
+/* Old versions of Maxima abort on loading files that end in a comment. */
+"Created with wxMaxima 22.04.0"$

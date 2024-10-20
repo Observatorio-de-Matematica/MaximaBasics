@@ -1,0 +1,90 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 22.04.0 ] */
+/* [wxMaxima: title   start ]
+Factorials
+   [wxMaxima: title   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+5!;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+n!;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+gamma(x);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+gamma(3);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+gamma(5);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+beta(5, 3);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+beta(x, y);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+makefact(gamma(x));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+makefact(beta(x, y));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+makefact(gamma(x+y)/x!);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+makegamma((x+1)!/(x+y)!);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+makegamma(z!*y!*x!);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+makegamma(beta(x, y));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+minfactorial((x+5)!/x!);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+minfactorial((x+5)!*(x+2)!/(x!^2));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+minfactorial((n+1)!/(n+3)!);
+/* [wxMaxima: input   end   ] */
+
+
+
+/* Old versions of Maxima abort on loading files that end in a comment. */
+"Created with wxMaxima 22.04.0"$

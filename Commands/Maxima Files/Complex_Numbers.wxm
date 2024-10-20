@@ -1,0 +1,140 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 22.04.0 ] */
+/* [wxMaxima: title   start ]
+Complex Numbers
+   [wxMaxima: title   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+z=x+y%i;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+z2=r*cos(Θ)+r*sin(Θ)*%i;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+z3=r*%e^(%i*Θ);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+z1: x1+y1*%i;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+z2: x2 + y2*%i;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+z1 + z2;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+rectform(%);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+rectform(z1*z2);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+rectform(z1/z2);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+rectform(z1^2);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+rectform((2*%i)*(2 + 3*%i));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+rectform((4 + 5*%i)/(-2 + 7*%i));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+rectform((3+5*%i)^2);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+z1: r1%e^(%i*Θ1); z2:r2*%e^(%i*Θ2);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+polarform(z1+z2);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+polarform(z1*z2);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+polarform((2-2*%i)*(5-7*%i));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+polarform(5+3*%i);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+polarform(3+3*%i);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+realpart(x + %i*y);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+realpart(5 + 7*%i);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+imagpart(5 + 7*%i);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+imagpart((2+3*%i)/(1 + 4*%i));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+realpart((2+3*%i)/(1 + 4*%i));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+realpart((2 + 3*%i)/ (1 + 4*%i));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+demoivre(%e^(%i*Θ));
+/* [wxMaxima: input   end   ] */
+
+
+
+/* Old versions of Maxima abort on loading files that end in a comment. */
+"Created with wxMaxima 22.04.0"$

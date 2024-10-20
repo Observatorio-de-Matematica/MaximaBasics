@@ -1,0 +1,44 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 22.04.0 ] */
+/* [wxMaxima: title   start ]
+3D PLOTS
+   [wxMaxima: title   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot3d(%e^(-x^2-y^2), [x, -2, 2], [y, -2, 2]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot3d(%e^(-x^2-y^2), [x, -2, 2], [y, -2, 2], [grid, 50, 50]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot3d(atan(-x^2+y^3/4),[x,-4,4],[y,-4,4],[grid,50,50], [mesh_lines_color, red]);
+
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot3d([cos(a)*sin(b), sin(a)*sin(b), cos(b)],
+       [a,0,2*%pi], [b,0,%pi], [mesh_lines_color, false],
+       [grid,40,40], [same_xyz, true], [title, "Sphere"], [axes, solid]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot3d([x^2 + y^2, -x^2-y^2, x^2-y^2, [x, -2, 2], [y, -2, 2]]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+wxplot3d(x^2 + y^2, [x, -2, 2], [y, -2, 2],
+        [xlabel, "time (sec)"], [ylabel, "Velocity (cm/sec)"], [zlabel, "area"]);
+/* [wxMaxima: input   end   ] */
+
+
+
+/* Old versions of Maxima abort on loading files that end in a comment. */
+"Created with wxMaxima 22.04.0"$
